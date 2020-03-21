@@ -6,6 +6,7 @@ import FeedGroup from './components/FeedGroup/FeedGroup';
 const App: FunctionComponent = (props) => {
   let [rssConfig, setRssConfig] = useState([{title:"loading", url:"#loading"}]);
 
+  // https://stackoverflow.com/questions/44506207/reactjs-lifecycle-method-inside-a-functional-component
   useEffect(() => {
     fetch('./rss.json')
       .then(results => results.json())
