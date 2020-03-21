@@ -1,0 +1,17 @@
+{
+  "Dagens Nyheter": "http://www.dn.se/rss/senaste-nytt/",
+  "Aftonbladet": "http://www.aftonbladet.se/rss.xml",
+  "IDG": "http://feeds.idg.se/idg/JYvw?format=xml",
+  "Dagens Industri": "http://www.di.se/rss",
+  "Feber": "http://feber.se/rss",
+  "Engadget": "http://www.engadget.com/rss.xml",
+  "XKCD": "https://xkcd.com/rss.xml",
+  ".SE-podcasten": "https://www.iis.se/se-podcast.xml",
+  "theGamerCat": "http://www.thegamercat.com/feed/",
+  "Piratpodden": "http://www.piratposten.se/feed/podcast/",
+  "Sysadmin Casts": "https://sysadmincasts.com/feed.rss",
+  "Under The Radar": "https://www.relay.fm/radar/feed",
+  "Accidental Tech Podcast": "http://feeds.feedburner.com/atp/xwfo",
+  "Wisecrack's THE SQUANCH: A Rick &amp; Morty Podcast": "http://feeds.soundcloud.com/users/soundcloud:users:323807741/sounds.rss",
+  "NASA Breaking News": "http://www.nasa.gov/rss/dyn/breaking_news.rss"
+}

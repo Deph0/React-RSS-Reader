@@ -1,0 +1,11 @@
+.feed-item {
+    list-style: decimal;
+}
+.feed-item a:link {
+    color: #000;
+    text-decoration: none;
+}
+.feed-item a:hover   {
+    color:red;
+    text-decoration: underline;
+}
