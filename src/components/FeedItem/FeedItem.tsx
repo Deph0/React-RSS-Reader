@@ -8,11 +8,11 @@ type FeedItemProps = {
 }
 
 export default class FeedItem extends Component<FeedItemProps> {
-  static defaultProps: FeedItemProps = {
-    url: '##url##',
-    urlhint: '##urlhint##',
-    title: '##title##'
-  }
+  // static defaultProps: FeedItemProps = {
+  //   url: '##url##',
+  //   urlhint: '##urlhint##',
+  //   title: '##title##'
+  // }
 
   render() {
     const {url, title, urlhint} = this.props;

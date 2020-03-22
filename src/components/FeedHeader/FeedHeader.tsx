@@ -8,11 +8,11 @@ interface IFeedHeaderProps {
 }
 
  export default class FeedHeader extends Component<IFeedHeaderProps> {
-  static defaultProps: IFeedHeaderProps = {
-    feedindex: 0,
-    hint: '##hint##',
-    name: '##name##',
-  }
+  // static defaultProps: IFeedHeaderProps = {
+  //   feedindex: 0,
+  //   hint: '##hint##',
+  //   name: '##name##',
+  // }
 
   render() {
     const { feedindex, hint, name} = this.props;

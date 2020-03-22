@@ -78,15 +78,15 @@ export default class FeedGroup extends Component<IFeedGroupProps, IFeedGroupStat
   render() {
     const { title, feedindex } = this.props;
     const { feed } = this.state.data;
-    const feedItems = feed?.entries.map(obj => 
-       (<FeedItem url={obj.link} urlhint={obj.contentSnippet} title={obj.title} />)
+    const feedItems = feed?.entries.map((obj, i) => 
+       (<FeedItem key={i} url={obj.link} urlhint={obj.contentSnippet} title={obj.title} />)
     )
 
     return (
       <div className="col-sm-3">
         <div className="jumbotron p-3">
-          <FeedHeader feedindex={feedindex} name={title} hint={feed?.description} />
-          <UncontrolledCollapse toggler={`#rss-feeds${feedindex}`} className='collapse'>
+          <FeedHeader feedindex={feedindex} name={title} hint={feed?.description || ""} />
+          <UncontrolledCollapse toggler={`#rss-feeds${feedindex}`}>
             <div className="feed-container">
               {feedItems}
             </div>

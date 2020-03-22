@@ -23,7 +23,7 @@ const App: FunctionComponent = (props) => {
   // ];
   
   var feedGroups = rssConfig.map((x,i) => 
-    <FeedGroup title={x.title} feedindex={i} url={x.url}/>
+    <FeedGroup key={i} title={x.title} feedindex={i} url={x.url}/>
   );
 
   return (
