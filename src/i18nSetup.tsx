@@ -39,7 +39,7 @@ i18n
     .init({
         resources: translationResources,
         lng: "en",
-        debug: true,
+        debug: process.env.NODE_ENV === "development" ? true : false,
         keySeparator: false, // we do not use keys in form messages.welcome
         interpolation: {
             escapeValue: false // react already safes from xss

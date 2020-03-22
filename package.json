@@ -2,6 +2,7 @@
   "name": "rss-reder",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://ankr.se/rss",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -21,6 +22,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "start_https": "HTTPS=true react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -41,7 +43,6 @@
     ]
   },
   "devDependencies": {
-    "@types/react-native-rss-parser": "^1.4.0",
     "@types/reactstrap": "^8.4.2"
   }
 }

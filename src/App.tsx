@@ -8,7 +8,7 @@ const App: FunctionComponent = (props) => {
 
   // https://stackoverflow.com/questions/44506207/reactjs-lifecycle-method-inside-a-functional-component
   useEffect(() => {
-    fetch('./rss.json')
+    fetch(`${process.env.PUBLIC_URL}/rss.json`)
       .then(results => results.json())
       .then(data => {
         let obj = Object.entries(data).map(x => ({ title: x[0], url: (x[1] as string) }) );
