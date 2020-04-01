@@ -1,0 +1,36 @@
+name: Deployment
+on:
+  push:
+    branches:
+      - master
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: Install Packages
+        run: npm install
+      - name: Build page
+        run: npm run build
+      - name: Deploy to site
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.ACTIONS_DEPLOY_HOST }}
+          username: ${{ secrets.ACTIONS_DEPLOY_USER }}
+          password:  ${{ secrets.ACTIONS_DEPLOY_PASS }}
+          port: ${{ secrets.ACTIONS_DEPLOY_PORT }}
+          source: ${{ secrets.ACTIONS_DEPLOY_ARTIFACT }}
+          target: ${{ secrets.ACTIONS_DEPLOY_PATH }}
